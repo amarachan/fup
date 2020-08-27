@@ -31,7 +31,7 @@ const gettingTea = (prepareingTea, numCups) => {
     teaCup.push(diffTeaCups);
   }
 
-  return (teaCup,);
+  return teaCup;
 };
 
 // Only change code below this line
