@@ -93,4 +93,3 @@ var finalTabs = socialWindow
 console.log(finalTabs.tabs);
 
 
-
