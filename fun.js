@@ -1,12 +1,12 @@
-const prepareTea = ()=>'greentea';
+const prepareTea = () => 'greentea';
 
-const getTea = (numOfCups)=>{
-    const teaCups =[];
-    for(let cups = 0;cups<numOfCups;cups++){
-        const teaCup = prepareTea();
-        teaCups.push(teaCup);
-    }
-    return console.log(teaCups,numOfCups,":rocket:");
+const getTea = (numOfCups) => {
+  const teaCups = [];
+  for (let cups = 0; cups < numOfCups; cups++) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return console.log(teaCups, numOfCups, ":rocket:");
 }
 
 getTea(40);
@@ -26,7 +26,7 @@ a specific type of tea).
 const gettingTea = (prepareingTea, numCups) => {
   const teaCup = [];
 
-  for(let ncups = 0; ncups < numCups; ncups++) {
+  for (let ncups = 0; ncups < numCups; ncups++) {
     const diffTeaCups = prepareingTea();
     teaCup.push(diffTeaCups);
   }
@@ -35,13 +35,13 @@ const gettingTea = (prepareingTea, numCups) => {
 };
 
 // Only change code below this line
-const tea4GreenTeamFCC = gettingTea(preparegreenTea,27);
+const tea4GreenTeamFCC = gettingTea(preparegreenTea, 27);
 console.log(tea4GreenTeamFCC)
-const tea4BlackTeamFCC = gettingTea(prepareBlackTea,13);
+const tea4BlackTeamFCC = gettingTea(prepareBlackTea, 13);
 console.log(tea4BlackTeamFCC)
 // Only change code above this line
 
-const array = ["testing",1,2,3,4,5,6,7,8,9];
+const array = ["testing", 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(array.slice(2));
 console.log(array)
 
@@ -49,7 +49,7 @@ console.log(array)
 // understand the hazards of using Imperative code
 
 // tabs is an array of titles of each site open within the window
-var Window = function(tabs) {
+var Window = function (tabs) {
   this.tabs = tabs; // We keep a record of the array inside the object
 };
 
@@ -78,7 +78,7 @@ Window.prototype.tabClose = function (index) {
   // Only change code above this line
 
   return this;
- };
+};
 
 // Let's create three browser windows
 var workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // Your mailbox, drive, and other work sites
@@ -93,3 +93,61 @@ var finalTabs = socialWindow
 console.log(finalTabs.tabs);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Refactoring Global Variables out of functions
+
+
+// The global variable
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Change code below this line
+function add(originalBookList, bookName) {
+  // console.log(bookName,"bla bla bla")
+  let newBookList = [...originalBookList];
+  newBookList.push(bookName);
+  return newBookList;
+
+  // Change code above this line
+}
+
+// Change code below this line
+function remove(originalBookList, bookName) {
+  var book_index = originalBookList.indexOf(bookName);
+  console.log(book_index)
+  if (book_index >= 0) {
+    let newBookList = [...originalBookList]
+    newBookList.splice(book_index, 1);
+    return newBookList;
+
+    // Change code above this line
+  }
+}
+console.log(bookList, "before")
+console.log(bookList.indexOf("On The Electrodynamics of Moving Bodies"), "indexlocation");
+var newBookList = add(bookList, 'A Brief History of Time');
+console.log(newBookList,"first")
+var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+console.log(newerBookList,"second")
+var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+console.log(newestBookList,"third")
+console.log(bookList, "testing");
+
+let newVar = [1, 2, 3, 4, 5];
+newVar.splice(1, 1);
+console.log(newVar)
