@@ -11,7 +11,6 @@ const getTea = (numOfCups) => {
 
 getTea(40);
 
-
 // Function that returns a string representing a cup of green tea
 const preparegreenTea = () => 'greenTea';
 
