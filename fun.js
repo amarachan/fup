@@ -309,3 +309,4 @@ const ratings = watchList.map(movieSrc=>{
 console.log(JSON.stringify(ratings));
 
 
+//new universal function
